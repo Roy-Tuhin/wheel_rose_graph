@@ -147,16 +147,16 @@ class _MyHomePageState extends State<MyHomePage> {
                           "assets/images/Wheel.png",
                         )),
                     Positioned(
-                        top: 17,
-                        right: 64,
+                        top: 19,
+                        right: 63,
                         child: Transform(
                           transform: Matrix4.rotationZ(
-                              0.330000), //===============================Transform to rotated the graph
+                              0.320000), //===============================Transform to rotated the graph
                           alignment: FractionalOffset.center,
                           child: Container(
                             margin: const EdgeInsets.only(top: 10),
                             width: 350,
-                            height: 300,
+                            height: 302,
                             child: Chart(
                               data: [
                                 {

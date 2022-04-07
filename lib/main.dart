@@ -161,43 +161,44 @@ class _MyHomePageState extends State<MyHomePage> {
                               data: [
                                 {
                                   'value': int.parse(user_input_chart_value1),
-                                  'name': '1'
+                                  'name':
+                                      '/' //################################# P R O B L E M
                                 },
                                 {
                                   'value': int.parse(user_input_chart_value2),
-                                  'name': '2'
+                                  'name': '.'
                                 },
                                 {
                                   'value': int.parse(user_input_chart_value3),
-                                  'name': '3'
+                                  'name': '..'
                                 },
                                 {
                                   'value': int.parse(user_input_chart_value4),
-                                  'name': '4'
+                                  'name': '.*'
                                 },
                                 {
                                   'value': int.parse(user_input_chart_value5),
-                                  'name': '5'
+                                  'name': 'o.'
                                 },
                                 {
                                   'value': int.parse(user_input_chart_value6),
-                                  'name': '6'
+                                  'name': ':'
                                 },
                                 {
                                   'value': int.parse(user_input_chart_value7),
-                                  'name': '7'
+                                  'name': '._'
                                 },
                                 {
                                   'value': int.parse(user_input_chart_value8),
-                                  'name': '8'
+                                  'name': '.i'
                                 },
                                 {
                                   'value': int.parse(user_input_chart_value9),
-                                  'name': '9'
+                                  'name': '^'
                                 },
                                 {
                                   'value': int.parse(user_input_chart_value10),
-                                  'name': '10'
+                                  'name': '.~'
                                 },
                               ],
                               variables: {

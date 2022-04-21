@@ -148,6 +148,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       });
                     },
                     child: Text("Continue")),
+                //Text((int.parse('9' + '0') - 5).toString() + "%"),
+                Text((int.parse(user_input_chart_value1 + '0') - 5).toString() +
+                    "%"),
 
                 Container(
                   height: 500,
@@ -160,115 +163,370 @@ class _MyHomePageState extends State<MyHomePage> {
                           "assets/images/Wheel.png",
                         )),
                     Positioned(
-                        top: 28,
+                        top: 28.7,
                         right: 90,
                         child: Transform(
                           transform: Matrix4.rotationZ(
                               0.320000), //===============================Transform to rotated the graph
                           alignment: FractionalOffset.center,
-                          child: SfCircularChart(
-                            //backgroundColor: Colors.red,
-                            palette: <Color>[
-                              Color(0xffE5C7A0),
-                              Colors.brown.withOpacity(0.3),
-                              Colors.green.withOpacity(0.3),
-                              Colors.redAccent.withOpacity(0.3),
-                              Colors.blueAccent.withOpacity(0.3),
-                              Colors.teal.withOpacity(0.3)
-                            ],
-                            series: <DoughnutSeries<ChartData, String>>[
-                              DoughnutSeries<ChartData, String>(
-                                //opacity: 100,
-                                radius: '30%',
-                                dataSource: <ChartData>[
-                                  //   ChartData(
-                                  //       'USA',
-                                  //       9,
-                                  //       (int.parse(user_input_chart_value1) - 5)
-                                  //               .toString() +
-                                  //           '0%'),
-                                  // ChartData(
-                                  //     'China',
-                                  //     9,
-                                  //     (int.parse(user_input_chart_value2) - 5)
-                                  //             .toString() +
-                                  //         '0%'),
-                                  // ChartData(
-                                  //     'Russia',
-                                  //     9,
-                                  //     (int.parse(user_input_chart_value3) - 5)
-                                  //             .toString() +
-                                  //         '0%'),
-                                  // ChartData(
-                                  //     'Germany',
-                                  //     9,
-                                  //     (int.parse(user_input_chart_value4) - 5)
-                                  //             .toString() +
-                                  //         '0%'),
-                                  // ChartData(
-                                  //     'USA',
-                                  //     9,
-                                  //     (int.parse(user_input_chart_value5) - 5)
-                                  //             .toString() +
-                                  //         '0%'),
-                                  // ChartData(
-                                  //     'China',
-                                  //     9,
-                                  //     (int.parse(user_input_chart_value7) - 6)
-                                  //             .toString() +
-                                  //         '0%'),
-                                  // ChartData(
-                                  //     'Russia',
-                                  //     9,
-                                  //     (int.parse(user_input_chart_value8) - 7)
-                                  //             .toString() +
-                                  //         '0%'),
-                                  // ChartData(
-                                  //     'Germany',
-                                  //     9,
-                                  //     (int.parse(user_input_chart_value9) - 8)
-                                  //             .toString() +
-                                  //         '0%'),
-                                  // ChartData(
-                                  //     'Russia',
-                                  //     9,
-                                  //     (int.parse(user_input_chart_value1) - 9)
-                                  //             .toString() +
-                                  //         '0%'),
-                                  // ChartData(
-                                  //     'Germany',
-                                  //     9,
-                                  //     (int.parse(user_input_chart_value1) - 10)
-                                  //             .toString() +
-                                  //         '0%')
-                                  //===========================================================
-                                  ChartData(
-                                      'USA', 9, user_input_chart_value1 + '0%'),
-                                  ChartData('China', 9,
-                                      user_input_chart_value2 + '0%'),
-                                  ChartData('Russia', 9,
-                                      user_input_chart_value3 + '0%'),
-                                  ChartData('Germany', 9,
-                                      user_input_chart_value4 + '0%'),
-                                  ChartData(
-                                      'USA', 9, user_input_chart_value5 + '0%'),
-                                  ChartData('China', 9,
-                                      user_input_chart_value6 + '0%'),
-                                  ChartData('Russia', 9,
-                                      user_input_chart_value7 + '0%'),
-                                  ChartData('Germany', 9,
-                                      user_input_chart_value8 + '0%'),
-                                  ChartData('Russia', 9,
-                                      user_input_chart_value9 + '0%'),
-                                  ChartData('Germany', 9,
-                                      user_input_chart_value10 + '0%')
-                                ],
-                                xValueMapper: (ChartData data, _) => data.xVal,
-                                yValueMapper: (ChartData data, _) => data.yVal,
-                                pointRadiusMapper: (ChartData data, _) =>
-                                    data.radius,
-                              ),
-                            ],
+                          child: Opacity(
+                            opacity: 0.5,
+                            child: SfCircularChart(
+                              palette: <Color>[
+                                Color.fromARGB(144, 229, 199, 160),
+                                Colors.brown,
+                                Colors.green,
+                                Colors.redAccent,
+                                Colors.blueAccent,
+                                Colors.teal
+                              ],
+                              series: <DoughnutSeries<ChartData, String>>[
+                                DoughnutSeries<ChartData, String>(
+                                  //opacity: 100,
+                                  radius: '30%',
+                                  dataSource: <ChartData>[
+                                    //===========================================================
+
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value1 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value1 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value1 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value1 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value1 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value1 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value1 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value1 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value1 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value1 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value2 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value2 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value2 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value2 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value2 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value2 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value2 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value2 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value2 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value2 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value3 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value3 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value3 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value3 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value3 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value3 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value3 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value3 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value3 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value3 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value4 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value4 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value4 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value4 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value4 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value4 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value4 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value4 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value4 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value4 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value5 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value5 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value5 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value5 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value5 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value5 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value5 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value5 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value5 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value5 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value6 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value6 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value6 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value6 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value6 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value6 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value6 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value6 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value6 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value6 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value7 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value7 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value7 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value7 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value7 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value7 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value7 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value7 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value7 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value7 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value8 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value8 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value8 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value8 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value8 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value8 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value8 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value8 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value8 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value8 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value9 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value9 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value9 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value9 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value9 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value9 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value9 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value9 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value9 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value9 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    ChartData(
+                                        'USA',
+                                        9,
+                                        (user_input_chart_value10 == '10')
+                                            ? '93%'
+                                            : (user_input_chart_value10 == '9')
+                                                ? '85%'
+                                                : (user_input_chart_value10 ==
+                                                        '8')
+                                                    ? '79%'
+                                                    : (user_input_chart_value10 ==
+                                                            '7')
+                                                        ? '71%'
+                                                        : (user_input_chart_value10 ==
+                                                                '6')
+                                                            ? '63%'
+                                                            : (user_input_chart_value10 ==
+                                                                    '5')
+                                                                ? '55%'
+                                                                : (user_input_chart_value10 ==
+                                                                        '4')
+                                                                    ? '47%'
+                                                                    : (user_input_chart_value10 ==
+                                                                            '3')
+                                                                        ? '39%'
+                                                                        : (user_input_chart_value10 ==
+                                                                                '2')
+                                                                            ? '31%'
+                                                                            : (user_input_chart_value10 == '1')
+                                                                                ? '24%'
+                                                                                : "0"),
+                                    // ChartData('China', 9, '85%'),
+                                    // ChartData('Russia', 9, '79%'),
+                                    // ChartData('Germany', 9, '71%'),
+                                    // ChartData('USA', 9, '63%'),
+                                    // ChartData('China', 9, '55%'),
+                                    // ChartData('Russia', 9, '47%'),
+                                    // ChartData('Germany', 9, '39%'),
+                                    // ChartData('Russia', 9, '31%'),
+                                    // ChartData('Germany', 9, '24%')
+
+                                    // ChartData('USA', 9, (user_input_chart_value1==10)?  "93%" :  (user_input_chart_value1==9)?  ),
+                                    // ChartData('China', 9, '85%'),
+                                    // ChartData('Russia', 9, '79%'),
+                                    // ChartData('Germany', 9, '71%'),
+                                    // ChartData('USA', 9, '63%'),
+                                    // ChartData('China', 9, '55%'),
+                                    // ChartData('Russia', 9, '47%'),
+                                    // ChartData('Germany', 9, '39%'),
+                                    // ChartData('Russia', 9, '31%'),
+                                    // ChartData('Germany', 9, '24%')
+                                  ],
+                                  xValueMapper: (ChartData data, _) =>
+                                      data.xVal,
+                                  yValueMapper: (ChartData data, _) =>
+                                      data.yVal,
+                                  pointRadiusMapper: (ChartData data, _) =>
+                                      data.radius,
+                                ),
+                              ],
+                            ),
                           ),
                           // Container(
                           //   margin: const EdgeInsets.only(top: 10),
